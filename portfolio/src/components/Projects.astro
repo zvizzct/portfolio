@@ -17,7 +17,7 @@ const TAGS = {
     icon: JavaScript
   },
   TAILWIND: {
-    name: 'Tailwind CSS',
+    name: 'Tailwind',
     class: 'bg-[#003159] text-white',
     icon: Tailwind
   },
@@ -106,13 +106,13 @@ const PROJECTS = [
             {title}
           </h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-row mb-2 gap-x-2 text-wrap pr-4 ">
               {tags.map((tag) => (
-                <li>
+                <li class="text-wrap">
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-wrap text-xs ${tag.class} py-1 px-2  `}
                   >
-                    <tag.icon class="size-4" />
+                    <tag.icon class="size-4 text-wrap" />
                     {tag.name}
                   </span>
                 </li>
