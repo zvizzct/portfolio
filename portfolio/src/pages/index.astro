@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Badge from '../components/Badge.astro'
+import SocialPill from '../components/SocialPill.astro'
+import LinkedIn from '../components/icons/LinkedInIcon.astro'
+import GitHub from '../components/icons/GitHubIcon.astro'
+import MailIcon from '../components/icons/MailIcon.astro'
+import Experience from '../components/Experience.astro'
+import Container from '../components/Container.astro'
+import BriefCaseIcon from '../components/icons/BriefCaseIcon.astro'
+import CodeIcon from '../components/icons/CodeIcon.astro'
+import Projects from '../components/Projects.astro'
+import ProfileCheck from '../components/icons/ProfileCheck.astro'
+import AboutMe from '../components/AboutMe.astro'
+import SkillSet from '../components/SkillSet.astro'
+import SkillsIcon from '../components/icons/SkillsIcon.astro'
+---
+
+<Layout
+  title="Portfolio de Víctor - Desarrollador y Programador web"
+  description="Contratra a Víctor, un desarrollador web con experiencia en tecnologías como React, Node.js, TypeScript, APIRest, entre otras."
+  '
+>
+  <main class="px-4">
+    <Container class="py-44 pb-24" id="inicio">
+      <img
+        class="rounded-full shadow-lg size-16 mb-4"
+        src="../../public/melogo.png"
+      />
+      <h1
+        class="lg:text-5xl text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Víctor <a
+          href="https://www.linkedin.com/in/victor-puerta-zvizzct/"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="lg:text-2xl text-xl opacity-80 text-wrap max-w-[700px]">
+        Ingeniero Informático <span class="text-violet-700 font-semibold">
+          orientado al desarrollo web</span
+        >. Curioso por naturaleza, siempre en busca de nuevos retos y
+        oportunidades para aprender.
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/victor-puerta-zvizzct/">
+          <LinkedIn class="md:size-6 size-4" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/zvizzct">
+          <GitHub class="md:size-6 size-4" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:victor.puerta2298@gmail.com">
+          <MailIcon class="md:size-6 size-4" />
+          victor.puerta2298@gmail.com
+        </SocialPill>
+      </nav>
+    </Container>
+
+    <Container id="proyectos" class="py-16">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </Container>
+    <Container id="experiencia" class="py-16">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <BriefCaseIcon class="size-8" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </Container>
+    <Container id="habilidades" class="py-16">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <SkillsIcon class="size-8" />
+        Habilidades técnicas
+      </h2>
+      <SkillSet />
+    </Container>
+    <Container id="sobre-mi" class="py-16">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </Container>
+  </main>
+</Layout>

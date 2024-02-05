@@ -1,0 +1,24 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+
+const EXPERIENCE = [
+  {
+    title: 'Trainee Web Developer',
+    company: 'Escola Port Barcelona',
+    location: 'Barcelona, Spain',
+    date: 'Abril 2019 - Junio 2019',
+    description:
+      'Implementación de nuevas funcionalidades web, optimizando la interactividad y experiencia del usuario. Gestión de plugins de WordPress. Desarrollo con PHP, JavaScript, HTML y CSS, adaptándose a las necesidades del proyecto. Colaboración con el equipo de desarrollo para implementar mejoras.'
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

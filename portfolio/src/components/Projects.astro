@@ -1,0 +1,144 @@
+---
+import GitHub from './icons/GitHubIcon.astro'
+import Tailwind from './icons/TailwindIcon.astro'
+import Link from './icons/Link.astro'
+import LinkButton from './LinkButton.astro'
+import JavaScript from './icons/JavaScriptIcon.astro'
+import React from './icons/ReactIcon.astro'
+import HTML from './icons/HTMLIcon.astro'
+import PostgreSQL from './icons/PostgreSQLIcon.astro'
+import CSS from './icons/CSSIcon.astro'
+import NodeJS from './icons/NodeJSIcon.astro'
+
+const TAGS = {
+  JS: {
+    name: 'JavaScript',
+    class: 'bg-black text-white',
+    icon: JavaScript
+  },
+  TAILWIND: {
+    name: 'Tailwind CSS',
+    class: 'bg-[#003159] text-white',
+    icon: Tailwind
+  },
+  REACT: {
+    name: 'React',
+    class: 'bg-blue-600 text-white',
+    icon: React
+  },
+  HTML: {
+    name: 'HTML',
+    class: 'bg-red-400 text-white',
+    icon: HTML
+  },
+  POSTGRESQL: {
+    name: 'PostgreSQL',
+    class: 'bg-[#336791] text-white',
+    icon: PostgreSQL
+  },
+  CSS: {
+    name: 'CSS',
+    class: 'bg-sky-400 text-white',
+    icon: CSS
+  },
+  NODEJS: {
+    name: 'Node.js',
+    class: 'bg-[#a4e89e] text-white',
+    icon: NodeJS
+  }
+}
+const PROJECTS = [
+  {
+    title: 'El quiosco - Libreria de libros EPUB Gratis',
+    description:
+      'Proyecto diseñado para hacer la cultura más accesible permitiendo la descarga gratuita de libros en formato EPUB. Desde el punto de vista técnico, el proyecto se estructura en un frontend desarrollado en React y un backend implementado con Node.js y Express, que se comunica con una base de datos PostgreSQL para almacenar y gestionar la información.',
+    github: 'https://github.com/zvizzct/backend-epub-library',
+    image: '/projects/epub.png',
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.NODEJS, TAGS.POSTGRESQL]
+  },
+  {
+    title: 'Udemy Date Detective - Cuando se creó el curso de Udemy',
+    description:
+      'Buscador de cursos de Udemy por fecha de creación. Creado con React, consume la API de Udemy.',
+    link: 'https://app.netlify.com/sites/udemydatedetective',
+    github: 'https://github.com/zvizzct/UdeDateHunter',
+    image: '/projects/udemy.png',
+    tags: [TAGS.REACT, TAGS.CSS]
+  },
+  {
+    title: 'GIF Mania - Buscador de GIFs animados',
+    description:
+      ' Buscador de GIFs animados. Creado con React, consume la API de Giphy.',
+    link: 'https://app.netlify.com/sites/gifmania',
+    github: 'https://github.com/zvizzct/GiftMania',
+    image: '/projects/gif.png',
+    tags: [TAGS.REACT, TAGS.CSS]
+  },
+  {
+    title: 'Todo Simple App - Lista de tareas',
+    description:
+      'Aplicación de lista de tareas. Creado con JavaScript, HTML y CSS.',
+    link: 'https://todo-simple-app-test.netlify.app/',
+    github: 'https://github.com/zvizzct/todo-app',
+    image: '/projects/todo.png',
+    tags: [TAGS.JS, TAGS.HTML, TAGS.CSS]
+  }
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border-1 lg:border-gray-300 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800  dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

@@ -1,0 +1,143 @@
+---
+import GitHubIcon from './icons/GitHubIcon.astro'
+import TailwindIcon from './icons/TailwindIcon.astro'
+import JavaScriptIcon from './icons/JavaScriptIcon.astro'
+import ReactIcon from './icons/ReactIcon.astro'
+import HTMLIcon from './icons/HTMLIcon.astro'
+import PostgreSQLIcon from './icons/PostgreSQLIcon.astro'
+import CSSIcon from './icons/CSSIcon.astro'
+import NodeJSIcon from './icons/NodeJSIcon.astro'
+import ReduxIcon from './icons/ReduxIcon.astro'
+import TypeScriptIcon from './icons/TypeScriptIcon.astro'
+import ExpressIcon from './icons/ExpressJSIcon.astro'
+import BootstrapIcon from './icons/BoostrapIcon.astro'
+import MongoDBIcon from './icons/MongoDBIcon.astro'
+import MySQLIcon from './icons/MYSQLIcon.astro'
+import PythonIcon from './icons/PythonIcon.astro'
+import PostmanIcon from './icons/PostmanIcon.astro'
+import JestIcon from './icons/JestIcon.astro'
+import DockerIcon from './icons/DockerIcon.astro'
+import CIcon from './icons/CIcon.astro'
+import JavaIcon from './icons/JavaIcon.astro'
+import LinuxIcon from './icons/LinuxIcon.astro'
+import AWSIcon from './icons/AWSIcon.astro'
+
+// Define tus habilidades
+const SKILLS = [
+  {
+    name: 'HTML',
+    icon: HTMLIcon,
+    class: 'bg-red-400 text-white'
+  },
+  {
+    name: 'CSS',
+    icon: CSSIcon,
+    class: 'bg-sky-400 text-white'
+  },
+  {
+    name: 'JavaScript',
+    icon: JavaScriptIcon,
+    class: 'bg-black text-white'
+  },
+  {
+    name: 'TypeScript',
+    icon: TypeScriptIcon,
+    class: 'bg-blue-600 text-white'
+  },
+  {
+    name: 'Bootstrap',
+    icon: BootstrapIcon,
+    class: 'bg-purple-500 text-white'
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: TailwindIcon,
+    class: 'bg-[#003159] text-white'
+  },
+  {
+    name: 'React',
+    icon: ReactIcon,
+    class: 'bg-blue-600 text-white'
+  },
+  {
+    name: 'Redux',
+    icon: ReduxIcon,
+    class: 'bg-purple-400 text-white'
+  },
+  {
+    name: 'Node.js',
+    icon: NodeJSIcon,
+    class: 'bg-[#a4e89e] text-white'
+  },
+  {
+    name: 'Express',
+    icon: ExpressIcon,
+    class: 'bg-gray-700 text-white'
+  },
+  {
+    name: 'MongoDB',
+    icon: MongoDBIcon,
+    class: 'bg-green-500 text-white'
+  },
+  {
+    name: 'MySQL',
+    icon: MySQLIcon,
+    class: 'bg-blue-500 text-white'
+  },
+  {
+    name: 'PostgreSQL',
+    icon: PostgreSQLIcon,
+    class: 'bg-[#336791] text-white'
+  },
+  {
+    name: 'Python',
+    icon: PythonIcon,
+    class: 'bg-blue-200 text-white'
+  },
+  {
+    name: 'Java',
+    icon: JavaIcon,
+    class: 'bg-red-300 text-white'
+  },
+  {
+    name: 'Jest',
+    icon: JestIcon,
+    class: 'bg-pink-500 text-white'
+  },
+  {
+    name: 'Docker',
+    icon: DockerIcon,
+    class: 'bg-blue-300 text-white'
+  },
+  {
+    name: 'GitHub',
+    icon: GitHubIcon,
+    class: 'bg-gray-800 text-white'
+  },
+  {
+    name: 'AWS',
+    icon: AWSIcon,
+    class: 'bg-gray-400 text-white'
+  },
+  {
+    name: 'Postman',
+    icon: PostmanIcon,
+    class: 'bg-orange-600 text-white'
+  }
+]
+---
+
+<div class="skills-container p-8">
+  <div class="skills-grid grid grid-cols-2 md:grid-cols-4 gap-4">
+    {
+      SKILLS.map((skill) => (
+        <div
+          class={` hover:scale-105 transition skill-card flex flex-col items-center justify-center p-4 rounded-lg shadow-lg ${skill.class}`}
+        >
+          <skill.icon class="skill-icon h-12 w-12 mb-2" />
+          <h3 class="skill-name text-sm font-medium">{skill.name}</h3>
+        </div>
+      ))
+    }
+  </div>
+</div>
