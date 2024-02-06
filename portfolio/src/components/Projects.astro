@@ -49,18 +49,18 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: 'El quiosco - Libreria de libros EPUB Gratis',
+    title: 'El quiosco - Librería EPUB Gratis',
     description:
-      'Proyecto diseñado para hacer la cultura más accesible permitiendo la descarga gratuita de libros en formato EPUB. Desde el punto de vista técnico, el proyecto se estructura en un frontend desarrollado en React y un backend implementado con Node.js y Express, que se comunica con una base de datos PostgreSQL para almacenar y gestionar la información.',
+      'Proyecto diseñado para hacer la cultura más accesible permitiendo la descarga gratuita de libros en formato EPUB.  Frontend desarrollado en React y un backend implementado con Node.js y Express, base de datos PostgreSQL para almacenar y gestionar la información.',
     github: 'https://github.com/zvizzct/backend-epub-library',
     image: '/projects/epub.png',
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.NODEJS, TAGS.POSTGRESQL]
   },
   {
-    title: 'Udemy Date Detective - Cuando se creó el curso de Udemy',
+    title: 'Udemy Date Detective - Descubre cuando se crreo un curso de Udemy',
     description:
-      'Buscador de cursos de Udemy por fecha de creación. Creado con React, consume la API de Udemy.',
-    link: 'https://app.netlify.com/sites/udemydatedetective',
+      'Buscador de cursos de Udemy por fecha de creación, permite ver cuando fue la última vez que se modificó y cuando se creó. Creado con React, consume la API de Udemy.',
+    link: 'https://udemydatedetective.netlify.app/',
     github: 'https://github.com/zvizzct/UdeDateHunter',
     image: '/projects/udemy.png',
     tags: [TAGS.REACT, TAGS.CSS]
@@ -69,7 +69,7 @@ const PROJECTS = [
     title: 'GIF Mania - Buscador de GIFs animados',
     description:
       ' Buscador de GIFs animados. Creado con React, consume la API de Giphy.',
-    link: 'https://app.netlify.com/sites/gifmania',
+    link: 'https://gifmania.netlify.app/',
     github: 'https://github.com/zvizzct/GiftMania',
     image: '/projects/gif.png',
     tags: [TAGS.REACT, TAGS.CSS]
@@ -93,7 +93,7 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border-1 lg:border-gray-300 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt={title}
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
