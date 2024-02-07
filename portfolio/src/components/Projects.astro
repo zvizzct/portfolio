@@ -9,6 +9,8 @@ import HTML from './icons/HTMLIcon.astro'
 import PostgreSQL from './icons/PostgreSQLIcon.astro'
 import CSS from './icons/CSSIcon.astro'
 import NodeJS from './icons/NodeJSIcon.astro'
+import Python from './icons/PythonIcon.astro'
+import Flask from './icons/FlaskIcon.astro'
 
 const TAGS = {
   JS: {
@@ -45,6 +47,16 @@ const TAGS = {
     name: 'Node.js',
     class: 'bg-[#a4e89e] text-white',
     icon: NodeJS
+  },
+  PYTHON: {
+    name: 'Python',
+    class: 'bg-[#306998] text-white',
+    icon: Python
+  },
+  FLASK: {
+    name: 'Flask',
+    class: 'bg-[#4d4a4a] text-white',
+    icon: Flask
   }
 }
 const PROJECTS = [
@@ -55,6 +67,14 @@ const PROJECTS = [
     github: 'https://github.com/zvizzct/backend-epub-library',
     image: '/projects/epub.png',
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.NODEJS, TAGS.POSTGRESQL]
+  },
+  {
+    title: 'IRWA Search Index Engine - Motor de búsqueda de la web',
+    description:
+      ' Motor de busqueda con distintos algoritmos de busqueda y analisis de texto. Desarrollado con Python y Flask.',
+    github: 'https://github.com/zvizzct/search-engine-web-app',
+    image: '/projects/searchindex.png',
+    tags: [TAGS.PYTHON, TAGS.FLASK, TAGS.HTML, TAGS.CSS]
   },
   {
     title: 'Udemy Date Detective - Descubre cuando se crreo un curso de Udemy',
