@@ -1,0 +1,67 @@
+---
+const INITIATIVES = [
+  {
+    label: 'Marcos de trabajo',
+    title: 'Estandarizacion UES',
+    summary:
+      'Trabajo orientado a definir una base comun para proyectos del departamento: documentacion minima util, contratos entre front y back, plantillas, CI/CD y contexto legible tambien por agentes.',
+    detail:
+      'La idea no era añadir proceso por añadir, sino quitar friccion en onboarding, handover, code review y despliegue sin cargar a los equipos con burocracia innecesaria.'
+  },
+  {
+    label: 'Adopcion tecnica',
+    title: 'IA aplicada al flujo de ingenieria',
+    summary:
+      'Investigacion y sintesis sobre como integrar asistentes, agentes, MCPs, skills y distintos modos de trabajo dentro del desarrollo real de software.',
+    detail:
+      'Me interesa especialmente el punto donde una herramienta deja de ser una demo y pasa a formar parte de un marco operativo claro, con contexto, limites y revision humana.'
+  }
+]
+---
+
+<div class="initiative-list">
+  {
+    INITIATIVES.map((initiative) => (
+      <article class="initiative-entry">
+        <p class="initiative-label">{initiative.label}</p>
+        <h3>{initiative.title}</h3>
+        <p>{initiative.summary}</p>
+        <p>{initiative.detail}</p>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .initiative-list {
+    display: grid;
+    gap: 26px;
+  }
+
+  .initiative-entry {
+    display: grid;
+    gap: 6px;
+  }
+
+  .initiative-label {
+    color: var(--soft-ink);
+  }
+
+  .initiative-entry h3 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .initiative-entry p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+  }
+
+  .initiative-entry h3,
+  .initiative-label {
+    margin: 0;
+  }
+</style>

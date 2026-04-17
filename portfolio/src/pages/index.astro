@@ -1,102 +1,223 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Badge from '../components/Badge.astro'
-import SocialPill from '../components/SocialPill.astro'
-import LinkedIn from '../components/icons/LinkedInIcon.astro'
-import GitHub from '../components/icons/GitHubIcon.astro'
-import MailIcon from '../components/icons/MailIcon.astro'
-import Experience from '../components/Experience.astro'
-import Container from '../components/Container.astro'
-import BriefCaseIcon from '../components/icons/BriefCaseIcon.astro'
-import CodeIcon from '../components/icons/CodeIcon.astro'
-import Projects from '../components/Projects.astro'
-import ProfileCheck from '../components/icons/ProfileCheck.astro'
 import AboutMe from '../components/AboutMe.astro'
-import SkillSet from '../components/SkillSet.astro'
-import SkillsIcon from '../components/icons/SkillsIcon.astro'
+import Experience from '../components/Experience.astro'
+import LinkButton from '../components/LinkButton.astro'
+import Projects from '../components/Projects.astro'
+import SectionBlock from '../components/SectionBlock.astro'
+import Studies from '../components/Studies.astro'
 ---
 
 <Layout
-  title="Portfolio de Víctor - Desarrollador y Programador web"
-  description="Contratra a Víctor, un desarrollador web con experiencia en tecnologías como React, Node.js, TypeScript, APIRest, entre otras."
-  '
+  title="Víctor Puerta | Portfolio"
+  description="Portfolio de Víctor Puerta, con foco en sistemas, automatizacion, IA aplicada y resolucion de problemas."
 >
-  <main class="px-4">
-    <Container class="py-44 pb-24" id="inicio">
-      <img
-        class="rounded-full shadow-lg size-16 mb-4"
-        alt="Logo del github de víctor"
-        src="/melogo.jpg"
-      />
-      <h1
-        class="lg:text-5xl md:text-4xl text-2xl font-bold flex md:flex-row lg:flex-row flex-col gap-y-2 md:justify-start md:items-center justify-start items-start gap-x-4 pb-6 lg:pb-10"
-      >
-        Hey, soy Víctor <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/victor-puerta-zvizzct/"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="lg:text-2xl text-md opacity-80 text-wrap max-w-[700px]">
-        Ingeniero informático <span class="text-violet-700 font-semibold">
-          orientado al desarrollo web</span
-        >. Curioso por naturaleza, siempre en busca de nuevos retos y
-        oportunidades para aprender.
-      </h2>
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/victor-puerta-zvizzct/">
-          <LinkedIn class="md:size-6 size-4" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/zvizzct">
-          <GitHub class="md:size-6 size-4" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="mailto:victor.puerta2298@gmail.com">
-          <MailIcon class="md:size-6 size-4" />
-          victor.puerta2298@gmail.com
-        </SocialPill>
-      </nav>
-    </Container>
+  <main class="site-main">
+    <section class="hero" id="inicio">
+      <h1 class="hero-title">Víctor Puerta</h1>
 
-    <Container id="proyectos" class="py-16">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <CodeIcon class="size-7" />
-        Proyectos
-      </h2>
-      <Projects />
-    </Container>
-    <Container id="experiencia" class="py-16">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <BriefCaseIcon class="size-8" />
-        Experiencia laboral
-      </h2>
+      <p class="hero-title-note">Ingeniería de software, sistemas e IA.</p>
+
+      <p class="hero-lede">
+        Construyo software y también el marco que lo rodea: documentación
+        accionable, tooling útil y decisiones que aguantan cuando el equipo
+        crece.
+      </p>
+
+      <div class="link-list">
+        <LinkButton href="mailto:victor.puerta2298@gmail.com">email</LinkButton>
+        <LinkButton
+          href="https://www.linkedin.com/in/victor-puerta-zvizzct/"
+          variant="secondary"
+        >
+          linkedin
+        </LinkButton>
+        <LinkButton href="https://github.com/zvizzct" variant="secondary">
+          github
+        </LinkButton>
+      </div>
+
+      <ul class="hero-notes">
+        <li class="hero-note-row">
+          <span class="eyebrow">Ahora:</span>
+          <p>Eurecat, pipelines, sistemas internos y tooling de ingeniería.</p>
+        </li>
+        <li class="hero-note-row">
+          <span class="eyebrow">Siguiente:</span>
+          <p>Un equipo donde diseñar y construir formen parte del mismo trabajo.</p>
+        </li>
+      </ul>
+    </section>
+
+    <SectionBlock
+      id="experiencia"
+      title="Experiencia"
+      kicker="Recorrido profesional"
+    >
       <Experience />
-    </Container>
-    <Container id="habilidades" class="py-16">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <SkillsIcon class="size-8" />
-        Habilidades técnicas
-      </h2>
-      <SkillSet />
-    </Container>
-    <Container id="sobre-mi" class="py-16">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-      >
-        <ProfileCheck class="size-8" />
-        Sobre mí
-      </h2>
+    </SectionBlock>
+
+    <SectionBlock
+      id="proyectos"
+      title="Proyectos"
+      kicker="Sistemas, tooling y producto"
+    >
+      <Projects />
+    </SectionBlock>
+
+    <SectionBlock
+      id="estudios"
+      title="Estudios"
+      kicker="Base académica y técnica"
+    >
+      <Studies />
+    </SectionBlock>
+
+    <SectionBlock
+      id="sobre-mi"
+      title="Perfil"
+      kicker="Qué busco y cómo trabajo"
+    >
       <AboutMe />
-    </Container>
+    </SectionBlock>
+
+    <section class="contact-note" id="contacto">
+      <div class="contact-copy">
+        <p class="eyebrow contact-eyebrow">final</p>
+        <h2>Contacto</h2>
+      </div>
+
+      <div class="contact-actions">
+        <LinkButton href="mailto:victor.puerta2298@gmail.com">
+          email
+        </LinkButton>
+        <LinkButton
+          href="https://www.linkedin.com/in/victor-puerta-zvizzct/"
+          variant="secondary"
+        >
+          linkedin
+        </LinkButton>
+        <LinkButton href="https://github.com/zvizzct" variant="secondary">
+          github
+        </LinkButton>
+      </div>
+    </section>
   </main>
 </Layout>
+
+<style>
+  .hero {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 56px;
+  }
+
+  .hero-notes {
+    display: grid;
+    gap: 8px;
+    list-style: none;
+    margin: 12px 0 0;
+  }
+
+  .hero-note-row {
+    display: block;
+  }
+
+  .hero-note-row .eyebrow {
+    display: inline;
+    color: var(--ink);
+  }
+
+  .hero-note-row p {
+    display: inline;
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+  }
+
+  .hero-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .hero-title-note {
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0;
+  }
+
+  .hero-lede {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+    max-width: 62ch;
+  }
+
+  .contact-note {
+    display: block;
+    margin-top: 42px;
+    color: var(--ink);
+  }
+
+  .contact-copy {
+    display: grid;
+    gap: 8px;
+  }
+
+  .contact-eyebrow {
+    color: var(--soft-ink);
+  }
+
+  .contact-copy h2 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  .contact-copy p:last-child {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-title {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      margin-bottom: 42px;
+    }
+
+    .hero-title {
+      font-size: 20px;
+    }
+
+    .hero-title-note {
+      font-size: 14px;
+    }
+
+    .hero-lede {
+      font-size: 14px;
+    }
+
+    .contact-copy h2 {
+      font-size: 17px;
+    }
+  }
+</style>

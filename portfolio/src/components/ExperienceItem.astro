@@ -1,36 +1,69 @@
 ---
 interface Props {
+  kind: string
   title: string
-  company: string
+  organization: string
   description: string
-  link?: string
-  date: string
+  period: string
 }
 
-const { title, company, description, link, date } = Astro.props
+const { kind, title, organization, description, period } = Astro.props
 ---
 
-<div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/25 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
->
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
-      <span class="text-violet-500 -left-[42px] absolute rounded-full text-5xl"
-        >&bull;</span
-      >
+<article class="track-item">
+  <p class="track-meta">
+    <span class="track-kind">{kind}</span>
+    <time class="track-period">{period}</time>
+  </p>
 
-      <h3 class="text-xl font-bold text-violet-900">{title}</h3>
-      <h4 class="font-semibold text-xl text-gray-800 dark:text-white">
-        {company}
-      </h4>
-      <time class="p-0 m-0 text-sm text-gray-900/80 dark:text-white/80"
-        >{date}</time
-      >
-    </div>
-  </div>
-  <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-900 dark:text-gray-300 md:col-span-3"
-  >
-    {description}
-  </div>
-</div>
+  <h3>{title}</h3>
+  <p class="track-organization">{organization}</p>
+  <p class="track-description">{description}</p>
+</article>
+
+<style>
+  .track-item {
+    display: grid;
+    gap: 4px;
+  }
+
+  .track-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
+  .track-kind {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--soft-ink);
+  }
+
+  .track-period {
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--soft-ink);
+  }
+
+  .track-item h3 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .track-organization {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+
+  .track-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+
+const STUDIES = [
+  {
+    kind: 'Estudios',
+    title: 'Ingeniería Informática',
+    organization: 'Universitat Pompeu Fabra',
+    period: 'Finalizada',
+    description:
+      'Formación orientada a ingeniería de software, análisis, arquitectura y construcción de sistemas.'
+  },
+  {
+    kind: 'Estudios',
+    title: 'CFGS Desarrollo Web',
+    organization: 'Formación técnica previa',
+    period: 'Etapa anterior',
+    description:
+      'Base práctica en frontend, backend y fundamentos de desarrollo antes de profundizar en ingeniería informática.'
+  }
+]
+---
+
+<div class="studies-list">
+  {STUDIES.map((entry) => <ExperienceItem {...entry} />)}
+</div>
+
+<style>
+  .studies-list {
+    display: grid;
+    gap: 28px;
+  }
+</style>
