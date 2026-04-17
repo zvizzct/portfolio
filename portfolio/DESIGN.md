@@ -10,6 +10,7 @@ This version intentionally avoids:
 - stacked grids and side-by-side content
 - decorative separators
 - strong component framing
+- utility-class-driven styling as the primary authoring model
 
 The page should read like one clear document.
 
@@ -27,7 +28,7 @@ The page should read like one clear document.
 - outer background should feel like app chrome
 - main content should feel like a plain document page
 - center the page on desktop
-- keep the sheet simple: border and shadow only if subtle
+- keep the sheet simple: subtle border only, no decorative card treatment
 
 ### Mood
 - minimal
@@ -39,16 +40,16 @@ The page should read like one clear document.
 ## 4. Palette
 
 ### Core
-- `--canvas: #dde3eb`
-- `--paper: #ffffff`
-- `--paper-alt: #f4f6f8`
-- `--ink: #252a33`
-- `--ink-deep: #161a20`
+- `--canvas: #c9c9c7`
+- `--paper: #f4f4f2`
+- `--paper-alt: #eeeeed`
+- `--ink: #1e1e1c`
+- `--ink-deep: #111110`
 
 ### Support
-- `--accent: #4f6782`
-- `--muted-ink: rgba(37, 42, 51, 0.78)`
-- `--soft-ink: rgba(37, 42, 51, 0.56)`
+- `--accent: #4a5c6e`
+- `--muted-ink: rgba(30, 30, 28, 0.72)`
+- `--soft-ink: rgba(30, 30, 28, 0.48)`
 
 ### Rules
 - keep contrast clear
@@ -77,6 +78,8 @@ The page should read like one clear document.
 - centered document sheet
 - medium reading width
 - one vertical flow from top to bottom
+- document width should stay around `74ch` inside the frame
+- page frame should stay under `880px`
 
 ### Structure
 - no columns in hero
@@ -100,8 +103,8 @@ The hero should feel like the first lines of a text file.
 
 ### Rules
 - section titles should be small and simple
-- no hard separators are required
-- sections should be separated mostly by margin
+- light separators are acceptable when they read as document structure
+- sections should be separated mostly by margin, with one quiet top rule per block
 
 ## 9. Entries
 
@@ -121,6 +124,7 @@ Everything should stack vertically.
 - underline instead of button chrome
 - lowercase is acceptable
 - no filled or outlined buttons
+- hover should only change ink/accent, never add pill or button framing
 
 ## 11. Responsive Behavior
 
@@ -128,8 +132,16 @@ Everything should stack vertically.
 - keep exactly the same single-column logic
 - remove visual framing if it hurts simplicity
 - never introduce alternate grids
+- keep the same document frame logic, reducing margin and padding instead of changing layout model
 
-## 12. Final Checklist
+## 12. Implementation Notes
+
+- Styling lives in component-local CSS plus a small global layer in `src/layouts/Layout.astro`.
+- Tailwind is intentionally removed from the project; the design system should remain readable without utility infrastructure.
+- The active runtime target is Astro 6 with Node `>=22.12.0`.
+- Legacy components that depend on removed styling systems should be deleted, not kept as dormant alternatives.
+
+## 13. Final Checklist
 
 - [x] one font only
 - [x] one column only
@@ -137,3 +149,4 @@ Everything should stack vertically.
 - [x] simplified background
 - [x] no decorative grids
 - [x] links instead of buttons
+- [x] local CSS instead of legacy Tailwind setup
