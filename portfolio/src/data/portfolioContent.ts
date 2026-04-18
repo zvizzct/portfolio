@@ -80,9 +80,6 @@ export interface PortfolioContent {
     title: string
     links: PortfolioLink[]
   }
-  footer: {
-    emailLabel: string
-  }
 }
 
 const sharedUrls = {
@@ -289,9 +286,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         { label: 'linkedin', href: sharedUrls.linkedin, variant: 'secondary' },
         { label: 'github', href: sharedUrls.github, variant: 'secondary' }
       ]
-    },
-    footer: {
-      emailLabel: 'Email'
     }
   },
   es: {
@@ -491,9 +485,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         { label: 'linkedin', href: sharedUrls.linkedin, variant: 'secondary' },
         { label: 'github', href: sharedUrls.github, variant: 'secondary' }
       ]
-    },
-    footer: {
-      emailLabel: 'Correo'
     }
   }
 }
