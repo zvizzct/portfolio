@@ -277,7 +277,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       paragraphs: [
         'My starting point is full-stack development. I work across frontend, backend, APIs, data flows, and product work, especially when software needs to solve a real client or research problem.',
         'Alongside delivery, I usually improve the way engineering work gets done: internal tools, documentation, automation, and shared conventions that save time and reduce friction.',
-        'I’m interested in applied AI in the same practical way. I care less about novelty than about where it helps, where it needs limits, and how it can become part of everyday engineering work.'
+        "I'm interested in applied AI in the same practical way. I care less about novelty than about where it helps, where it needs limits, and how it can become part of everyday engineering work."
       ]
     },
     contact: {
@@ -348,7 +348,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     },
     projectLabels: {
       role: 'Rol',
-      stack: 'Stack',
+      stack: 'Tecnologías',
       contribution: 'Contribución',
       impact: 'Impacto'
     },
@@ -359,11 +359,11 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       },
       {
         title: 'Herramientas internas y automatización',
-        detail: 'Utilidades y flujos que reducen setup, repetición y trabajo manual.'
+        detail: 'Utilidades y flujos que reducen tiempo de configuración, repetición y trabajo manual.'
       },
       {
-        title: 'Tooling e integraciones para agentes',
-        detail: 'Tooling e integraciones para que un equipo adopte agentes con convenciones más claras y menos fricción.'
+        title: 'Herramientas e integraciones para agentes',
+        detail: 'Herramientas e integraciones para que un equipo adopte agentes con convenciones más claras y menos fricción.'
       },
       {
         title: 'Backend y arquitectura de sistemas',
@@ -381,7 +381,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         organization: 'Eurecat',
         period: 'Abr 2024 - Actualidad',
         description:
-          'Trabajo full-stack en proyectos para cliente y ligados a investigación, incluyendo pipelines de datos, APIs, interfaces técnicas y flujos con IA. Además de la entrega, también he construido herramientas internas, estandarizado setups de proyecto y apoyado la adopción práctica de IA dentro del flujo de ingeniería.'
+          'Trabajo full-stack en proyectos para cliente y ligados a investigación, incluyendo pipelines de datos, APIs, interfaces técnicas y flujos con IA. Además de la entrega, también he construido herramientas internas, estandarizado configuraciones de proyecto y apoyado la adopción práctica de IA dentro del flujo de ingeniería.'
       },
       {
         kind: 'Experiencia',
@@ -398,12 +398,12 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         title: 'Agent Runtime',
         summary:
           'Entorno compartido para que distintos equipos trabajen con agentes sin montar su stack desde cero.',
-        role: 'Arquitectura de tooling',
+        role: 'Arquitectura de herramientas',
         stack: 'MCP, Python, shell scripts y wrappers multiagente',
         contribution:
           'Diseño de la capa de tooling y del modelo de empaquetado de MCPs y skills para adaptarlos a cada departamento.',
         impact:
-          'Reduce setup manual y convierte convenciones internas en herramientas reutilizables.'
+          'Reduce trabajo manual de configuración y convierte convenciones internas en herramientas reutilizables.'
       },
       {
         label: 'Pipeline interna + LLM',
@@ -425,7 +425,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         role: 'Arquitectura + full-stack',
         stack: 'FastAPI, Next.js, Postgres, pgvector, Ollama y MCP',
         contribution:
-          'Definición de arquitectura y construcción de la capa de memoria, búsqueda semántica y tooling MCP alrededor del flujo de trabajo.',
+          'Definición de la arquitectura y construcción de la capa de memoria, la búsqueda semántica y las herramientas MCP alrededor del flujo de trabajo.',
         impact:
           'Reduce la carga de contexto entre sesiones y hace más reutilizable el conocimiento de proyecto.',
         links: [{ label: 'Código', href: 'https://github.com/zvizzct/organizacion' }]
@@ -449,7 +449,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         summary:
           'App iOS de armario personal con visión por IA, generación de outfits y calendario de uso.',
         role: 'iOS + producto',
-        stack: 'SwiftUI, async/await, LLM vision, Supabase y arquitectura modular',
+        stack: 'SwiftUI, async/await, visión con IA, Supabase y arquitectura modular',
         contribution:
           'Construcción de la experiencia nativa y de la arquitectura modular para catalogación, recomendaciones y suscripción.',
         impact:

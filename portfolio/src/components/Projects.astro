@@ -25,17 +25,17 @@ const { projects, labels } = Astro.props
         <p class="project-summary">{project.summary}</p>
 
         <p class="project-detail">
-          <span>{labels.stack}</span>
+          <span>{labels.stack}:</span>
           {project.stack}
         </p>
 
         <p class="project-detail">
-          <span>{labels.contribution}</span>
+          <span>{labels.contribution}:</span>
           {project.contribution}
         </p>
 
         <p class="project-detail">
-          <span>{labels.impact}</span>
+          <span>{labels.impact}:</span>
           {project.impact}
         </p>
 
