@@ -29,7 +29,9 @@ const GROUPS = [
       <article class="stack-item">
         <p class="stack-label">{group.title}</p>
         <p class="stack-description">{group.description}</p>
-        <p class="stack-items">{group.items.join(' / ')}</p>
+        <div class="stack-items">
+          {group.items.map((item) => <span class="stack-chip">{item}</span>)}
+        </div>
       </article>
     ))
   }
@@ -66,10 +68,19 @@ const GROUPS = [
   }
 
   .stack-items {
-    max-width: none;
-    font-size: 15px;
-    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .stack-chip {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
     color: var(--ink);
+    background: var(--paper-alt);
+    border: 1px solid rgba(30, 30, 28, 0.1);
+    padding: 3px 7px;
   }
 
   @media (max-width: 900px) {

@@ -192,7 +192,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Agent infrastructure',
         title: 'Agent Runtime',
         summary:
-          'A shared environment that lets different teams work with agents without assembling their stack from scratch.',
+          'A shared environment that lets different teams work with agents without assembling their stack from scratch, while keeping tooling and conventions reusable across departments.',
         role: 'Tooling architecture',
         stack: 'MCP, Python, shell scripts, and multi-agent wrappers',
         contribution:
@@ -204,7 +204,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Internal pipeline + LLM',
         title: 'UES Catalog',
         summary:
-          'An internal pipeline that turns GitLab projects into a searchable technical catalog.',
+          'An internal pipeline that turns GitLab projects into a searchable technical catalog, making scattered repository knowledge easier to retrieve and reuse.',
         role: 'Data pipeline + product',
         stack: 'Python, GitLab API, Spring Boot, MySQL, Next.js, and Docker',
         contribution:
@@ -216,7 +216,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Private system',
         title: 'Operational Memory',
         summary:
-          'A local-first system for working with agents around projects, tasks, and persistent context.',
+          'A local-first system for working with agents around projects, tasks, and persistent context, designed to keep decisions and project knowledge available across sessions.',
         role: 'Architecture + full-stack',
         stack: 'FastAPI, Next.js, Postgres, pgvector, Ollama, and MCP',
         contribution:
@@ -229,7 +229,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Digital library',
         title: 'The Kiosk',
         summary:
-          'A web-based EPUB library for browsing, organizing, and reading a catalog of around 80k books in the browser.',
+          'A web-based EPUB library for browsing, organizing, and reading a catalog of around 80k books in the browser, with search and reading designed for everyday use.',
         role: 'Frontend + backend',
         stack: 'React, Tailwind, Node.js, Express, and PostgreSQL',
         contribution:
@@ -242,7 +242,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Native iOS',
         title: 'Closet Native',
         summary:
-          'A personal wardrobe iOS app with AI vision, outfit generation, and a usage calendar.',
+          'A personal wardrobe iOS app with AI vision, outfit generation, and a usage calendar, built to turn cataloging and recommendations into a usable daily flow.',
         role: 'iOS + product',
         stack: 'SwiftUI, async/await, LLM vision, Supabase, and modular architecture',
         contribution:
@@ -391,7 +391,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Infraestructura de agentes',
         title: 'Agent Runtime',
         summary:
-          'Entorno compartido para que distintos equipos trabajen con agentes sin montar su stack desde cero.',
+          'Entorno compartido para que distintos equipos trabajen con agentes sin montar su stack desde cero, manteniendo herramientas y convenciones reutilizables entre departamentos.',
         role: 'Arquitectura de herramientas',
         stack: 'MCP, Python, shell scripts y wrappers multiagente',
         contribution:
@@ -403,7 +403,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Pipeline interna + LLM',
         title: 'Catálogo UES',
         summary:
-          'Pipeline interna para convertir proyectos de GitLab en un catálogo técnico consultable.',
+          'Pipeline interna para convertir proyectos de GitLab en un catálogo técnico consultable, haciendo más fácil recuperar y reutilizar conocimiento disperso entre repositorios.',
         role: 'Pipeline de datos + producto',
         stack: 'Python, GitLab API, Spring Boot, MySQL, Next.js y Docker',
         contribution:
@@ -415,7 +415,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Sistema privado',
         title: 'Memoria Operativa',
         summary:
-          'Sistema local-first para trabajar con agentes sobre proyectos, tareas y contexto persistente.',
+          'Sistema local-first para trabajar con agentes sobre proyectos, tareas y contexto persistente, pensado para mantener decisiones y conocimiento disponibles entre sesiones.',
         role: 'Arquitectura + full-stack',
         stack: 'FastAPI, Next.js, Postgres, pgvector, Ollama y MCP',
         contribution:
@@ -428,7 +428,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'Biblioteca digital',
         title: 'El Quiosco',
         summary:
-          'Biblioteca EPUB web para consultar, organizar y leer un catálogo de unos 80k libros desde el navegador.',
+          'Biblioteca EPUB web para consultar, organizar y leer un catálogo de unos 80k libros desde el navegador, con búsqueda y lectura pensadas para el uso diario.',
         role: 'Frontend + backend',
         stack: 'React, Tailwind, Node.js, Express y PostgreSQL',
         contribution:
@@ -441,7 +441,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         label: 'iOS nativo',
         title: 'Closet Native',
         summary:
-          'App iOS de armario personal con visión por IA, generación de outfits y calendario de uso.',
+          'App iOS de armario personal con visión por IA, generación de outfits y calendario de uso, diseñada para llevar catalogación y recomendaciones a un flujo cotidiano.',
         role: 'iOS + producto',
         stack: 'SwiftUI, async/await, visión con IA, Supabase y arquitectura modular',
         contribution:

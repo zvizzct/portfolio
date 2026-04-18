@@ -24,20 +24,11 @@ const { projects, labels } = Astro.props
 
         <p class="project-summary">{project.summary}</p>
 
-        <p class="project-detail">
-          <span>{labels.stack}:</span>
-          {project.stack}
-        </p>
-
-        <p class="project-detail">
-          <span>{labels.contribution}:</span>
-          {project.contribution}
-        </p>
-
-        <p class="project-detail">
-          <span>{labels.impact}:</span>
-          {project.impact}
-        </p>
+        <div class="project-details">
+          <p class="project-detail"><span>{labels.contribution}</span>{project.contribution}</p>
+          <p class="project-detail"><span>{labels.impact}</span>{project.impact}</p>
+          <p class="project-detail"><span>{labels.stack}</span>{project.stack}</p>
+        </div>
 
         {project.links && (
           <div class="project-actions">
@@ -58,60 +49,72 @@ const { projects, labels } = Astro.props
 <style>
   .project-list {
     display: grid;
-    gap: 24px;
+    gap: 28px;
   }
 
   .project-entry {
     display: grid;
-    gap: 5px;
+    gap: 0;
   }
 
   .project-head {
     display: grid;
-    gap: 2px;
+    gap: 5px;
+    margin-bottom: 10px;
   }
 
   .project-meta-line {
     display: flex;
     flex-wrap: wrap;
     gap: 6px 10px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.6;
     letter-spacing: 0;
     color: var(--soft-ink);
   }
 
   .project-meta-line span:first-child {
-    color: var(--muted-ink);
+    color: var(--soft-ink);
   }
 
   .project-head h3 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.5;
     letter-spacing: 0;
+    color: var(--ink-deep);
   }
 
   .project-summary {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.75;
     color: var(--muted-ink);
+    margin-bottom: 10px;
+  }
+
+  .project-details {
+    display: grid;
+    gap: 4px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(30, 30, 28, 0.08);
   }
 
   .project-detail {
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.65;
     color: var(--muted-ink);
   }
 
   .project-detail span {
+    font-weight: 500;
     color: var(--ink);
+    margin-right: 6px;
   }
 
   .project-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 14px;
-    margin-top: 2px;
+    margin-top: 12px;
   }
 </style>

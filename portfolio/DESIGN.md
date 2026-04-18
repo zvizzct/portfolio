@@ -150,3 +150,99 @@ Everything should stack vertically.
 - [x] no decorative grids
 - [x] links instead of buttons
 - [x] local CSS instead of legacy Tailwind setup
+
+---
+
+## 14. Typography Scale (concrete values)
+
+All sizes in px, font is `ui-monospace` throughout.
+
+| Role | Size | Weight | Color token | Line-height |
+|---|---|---|---|---|
+| Page title — h1 | 24px | 500 | `--ink` | 1.35 |
+| Section title — h2 | 15px | 500 | `--ink` | 1.5 |
+| Item title — h3 | **16px** | **500** | **`--ink-deep`** | 1.5 |
+| Body / description | **14px** | 400 | `--muted-ink` | 1.75 |
+| Meta / secondary | **12px** | 400 | `--soft-ink` | 1.6 |
+| Organization (italic) | 12px | 400 | `--soft-ink` | 1.6 |
+| Detail label (inline bold) | 13px | 500 | `--ink` | 1.65 |
+| Detail value | 13px | 400 | `--muted-ink` | 1.65 |
+
+### Notes
+- h3 is intentionally larger than h2: section titles are structural navigation, item titles are content anchors.
+- Project summary and detail rows use 13px (dense structured data). All other descriptions use 14px (prose).
+- Hero lede/support stays at 15px — special case, larger intro block.
+
+---
+
+## 15. Spacing Scale (concrete values)
+
+### Between sections
+- `margin-top: 48px` + `padding-top: 20px` + `border-top: 1px solid rgba(37,42,51,0.09)`
+
+### Between list items — unified at **28px** across all sections
+Applies to: projects, experience, education, capabilities, initiatives.
+
+### Within an item
+
+| Transition | Value |
+|---|---|
+| Meta → title | `margin-top: 5px` |
+| Title → organization | `margin-top: 2px` |
+| Title / org → description | `margin-top: 8px` |
+| Description → details block | `margin-top: 10px` + hairline `border-top` |
+| Between detail rows | `gap: 4px` |
+
+---
+
+## 16. Component anatomy
+
+### Section header (SectionBlock)
+```
+eyebrow  12px soft-ink
+h2       15px 500 ink
+```
+
+### Item with structured fields (Projects)
+```
+meta     12px soft-ink
+h3       16px 500 ink-deep
+─────────────────────────   ← 8px gap
+summary  13px muted-ink
+─────────────────────────   ← hairline separator
+Label    13px 500 ink    +  value 13px muted-ink
+```
+
+### Item with prose description (Experience / Education)
+```
+meta           12px soft-ink
+h3             16px 500 ink-deep
+organization   12px soft-ink italic
+─────────────────────────   ← 8px gap
+description    14px muted-ink
+```
+
+### Capability / Initiative item
+```
+label    12px soft-ink
+h3       16px 500 ink-deep
+─────────────────────────   ← 4px gap
+body     14px muted-ink
+```
+
+---
+
+## 17. Borders & separators
+
+| Element | Value |
+|---|---|
+| Page frame | `1px solid rgba(30,30,28,0.14)` |
+| Section divider | `1px solid rgba(37,42,51,0.09)` |
+| Project details separator | `1px solid rgba(30,30,28,0.08)` |
+
+---
+
+## 18. Color token corrections (v6 → current)
+
+`--accent` changed from `#4a5c6e` (in spec) to `#334454` (in code) — code is the source of truth.
+`--soft-ink` changed from `rgba(30,30,28,0.48)` (in spec) to `rgba(30,30,28,0.64)` (in code) — code is the source of truth.

@@ -24,7 +24,7 @@ const { kind, title, organization, description, period } = Astro.props
 <style>
   .track-item {
     display: grid;
-    gap: 4px;
+    gap: 0;
   }
 
   .track-meta {
@@ -34,7 +34,7 @@ const { kind, title, organization, description, period } = Astro.props
   }
 
   .track-kind {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     letter-spacing: 0;
     text-transform: none;
@@ -42,28 +42,33 @@ const { kind, title, organization, description, period } = Astro.props
   }
 
   .track-period {
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 0;
     text-transform: none;
     color: var(--soft-ink);
   }
 
   .track-item h3 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.5;
     letter-spacing: 0;
+    color: var(--ink-deep);
+    margin-top: 5px;
   }
 
   .track-organization {
-    font-size: 14px;
-    line-height: 1.65;
-    color: var(--ink);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--soft-ink);
+    font-style: italic;
+    margin-top: 2px;
   }
 
   .track-description {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.75;
     color: var(--muted-ink);
+    margin-top: 8px;
   }
 </style>
