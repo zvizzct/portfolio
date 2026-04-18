@@ -49,11 +49,11 @@ const { content, locale, switchHref } = Astro.props
     </section>
 
     <SectionBlock
-      id={content.sections.capabilities.id}
-      title={content.sections.capabilities.title}
-      kicker={content.sections.capabilities.kicker}
+      id={content.sections.projects.id}
+      title={content.sections.projects.title}
+      kicker={content.sections.projects.kicker}
     >
-      <Capabilities items={content.capabilities} />
+      <Projects projects={content.projects} labels={content.projectLabels} />
     </SectionBlock>
 
     <SectionBlock
@@ -65,11 +65,11 @@ const { content, locale, switchHref } = Astro.props
     </SectionBlock>
 
     <SectionBlock
-      id={content.sections.projects.id}
-      title={content.sections.projects.title}
-      kicker={content.sections.projects.kicker}
+      id={content.sections.capabilities.id}
+      title={content.sections.capabilities.title}
+      kicker={content.sections.capabilities.kicker}
     >
-      <Projects projects={content.projects} />
+      <Capabilities items={content.capabilities} />
     </SectionBlock>
 
     <SectionBlock

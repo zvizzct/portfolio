@@ -61,6 +61,12 @@ export interface PortfolioContent {
     education: PortfolioSection
     about: PortfolioSection
   }
+  projectLabels: {
+    role: string
+    stack: string
+    contribution: string
+    impact: string
+  }
   capabilities: CapabilityItem[]
   experience: ExperienceItemData[]
   projects: ProjectItem[]
@@ -102,9 +108,9 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       title: 'Víctor Puerta',
       note: 'Full-stack developer with a focus on automation, internal tools, and applied AI.',
       lede:
-        'I design and build full-stack software for client and research-driven projects, from interfaces and APIs to data and AI workflows.',
+        'I design and build full-stack software for client and research-driven projects, from interfaces and APIs to data systems and AI workflows.',
       support:
-        'Alongside that work, I tend to push internal tools, automation, and clearer ways of working that make engineering easier to scale and easier to operate with context.',
+        'I also build internal tools, automate repetitive work, and improve engineering workflows when that reduces friction and makes systems easier to maintain.',
       links: [
         { label: 'email', href: sharedUrls.email },
         { label: 'linkedin', href: sharedUrls.linkedin, variant: 'secondary' },
@@ -125,7 +131,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       projects: {
         id: 'projects',
         title: 'Projects',
-        kicker: 'Systems, tooling, and product'
+        kicker: 'Selected work'
       },
       education: {
         id: 'education',
@@ -138,22 +144,28 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         kicker: 'Engineering judgment and working style'
       }
     },
+    projectLabels: {
+      role: 'Role',
+      stack: 'Stack',
+      contribution: 'Contribution',
+      impact: 'Impact'
+    },
     capabilities: [
       {
-        title: 'Data pipelines and LLM workflows',
-        detail: 'Extraction, classification, enrichment, and technical context retrieval.'
+        title: 'Data pipelines and AI workflows',
+        detail: 'Extraction, classification, enrichment, and retrieval of technical context.'
       },
       {
-        title: 'Internal tools',
-        detail: 'Utilities, automations, and workflows that reduce setup time and manual work.'
+        title: 'Internal tools and automation',
+        detail: 'Utilities and workflows that reduce setup time, repetition, and manual work.'
       },
       {
-        title: 'Agents and MCPs',
-        detail: 'Tooling packaged so a team can adopt agents with clear conventions and less friction.'
+        title: 'Agent tooling and integrations',
+        detail: 'Tooling and integrations that help teams adopt agents with clearer conventions and less friction.'
       },
       {
-        title: 'Backend and architecture',
-        detail: 'APIs, services, and structure for systems that scale without losing clarity.'
+        title: 'Backend systems and architecture',
+        detail: 'APIs, services, and system design for products that grow without losing clarity.'
       },
       {
         title: 'Applied AI',
@@ -167,7 +179,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         organization: 'Eurecat',
         period: 'Apr 2024 - Present',
         description:
-          'Full-stack work on client and research-driven projects, including data pipelines with LLMs, APIs, and technical interfaces. Alongside delivery work, I have also pushed internal tools, project standardization, and the practical adoption of AI in the engineering workflow, with context, guardrails, and human review.'
+          'Full-stack work on client and research-driven projects, including data pipelines, APIs, technical interfaces, and AI-based workflows. Alongside delivery, I have also built internal tools, standardized project setups, and supported the practical adoption of AI in the engineering workflow.'
       },
       {
         kind: 'Experience',
@@ -263,9 +275,9 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     ],
     about: {
       paragraphs: [
-        'My starting point is full-stack development. I am comfortable moving across frontend, backend, APIs, and product work, especially in projects where software has to solve a real client or research problem rather than just look good in a demo.',
-        'Alongside delivery work, I tend to notice friction in how engineering is done and push useful improvements around internal tools, documentation, automation, and working conventions when they genuinely help. I am less interested in process for its own sake than in making a system easier to build, easier to understand, and easier to maintain.',
-        'Applied AI interests me in the same practical way. I care about where automation helps, where limits matter, and how new capabilities can become part of real engineering work without turning the system into something harder to trust.'
+        'My starting point is full-stack development. I work across frontend, backend, APIs, data flows, and product work, especially when software needs to solve a real client or research problem.',
+        'Alongside delivery, I usually improve the way engineering work gets done: internal tools, documentation, automation, and shared conventions that save time and reduce friction.',
+        'I’m interested in applied AI in the same practical way. I care less about novelty than about where it helps, where it needs limits, and how it can become part of everyday engineering work.'
       ]
     },
     contact: {
@@ -298,9 +310,9 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       title: 'Víctor Puerta',
       note: 'Desarrollador full-stack con foco en automatización, herramientas internas e IA aplicada.',
       lede:
-        'Diseño y construyo software full-stack para proyectos de cliente y de investigación, desde interfaces y APIs hasta flujos de datos y trabajo con IA.',
+        'Diseño y construyo software full-stack para proyectos de cliente y de investigación, desde interfaces y APIs hasta sistemas de datos y flujos con IA.',
       support:
-        'Además de esa parte, tiendo a empujar herramientas internas, automatización y formas de trabajo más claras que hacen la ingeniería más escalable y más fácil de operar con contexto.',
+        'También suelo construir herramientas internas, automatizar trabajo repetitivo y mejorar flujos de ingeniería cuando eso reduce fricción y hace los sistemas más mantenibles.',
       links: [
         { label: 'email', href: sharedUrls.email },
         { label: 'linkedin', href: sharedUrls.linkedin, variant: 'secondary' },
@@ -321,7 +333,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       projects: {
         id: 'projects',
         title: 'Proyectos',
-        kicker: 'Sistemas, herramientas y producto'
+        kicker: 'Trabajo seleccionado'
       },
       education: {
         id: 'education',
@@ -334,22 +346,28 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         kicker: 'Criterio técnico y forma de trabajar'
       }
     },
+    projectLabels: {
+      role: 'Rol',
+      stack: 'Stack',
+      contribution: 'Contribución',
+      impact: 'Impacto'
+    },
     capabilities: [
       {
-        title: 'Pipelines de datos y flujos con LLMs',
+        title: 'Pipelines de datos y flujos con IA',
         detail: 'Extracción, clasificación, enriquecimiento y recuperación de contexto técnico.'
       },
       {
-        title: 'Herramientas internas',
-        detail: 'Utilidades, automatizaciones y flujos que reducen setup y trabajo manual.'
+        title: 'Herramientas internas y automatización',
+        detail: 'Utilidades y flujos que reducen setup, repetición y trabajo manual.'
       },
       {
-        title: 'Agentes y MCPs',
-        detail: 'Tooling empaquetado para que un equipo adopte agentes con convenciones claras y menos fricción.'
+        title: 'Tooling e integraciones para agentes',
+        detail: 'Tooling e integraciones para que un equipo adopte agentes con convenciones más claras y menos fricción.'
       },
       {
-        title: 'Backend y arquitectura',
-        detail: 'APIs, servicios y estructura para sistemas que crecen sin perder legibilidad.'
+        title: 'Backend y arquitectura de sistemas',
+        detail: 'APIs, servicios y diseño de sistemas para productos que crecen sin perder claridad.'
       },
       {
         title: 'IA aplicada',
@@ -363,7 +381,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         organization: 'Eurecat',
         period: 'Abr 2024 - Actualidad',
         description:
-          'Trabajo full-stack en proyectos para cliente y ligados a investigación, incluyendo pipelines de datos con LLMs, APIs e interfaces técnicas. Además del trabajo de entrega, también he empujado herramientas internas, estandarización de proyectos y la adopción práctica de IA dentro del flujo de ingeniería, con contexto, límites y revisión humana.'
+          'Trabajo full-stack en proyectos para cliente y ligados a investigación, incluyendo pipelines de datos, APIs, interfaces técnicas y flujos con IA. Además de la entrega, también he construido herramientas internas, estandarizado setups de proyecto y apoyado la adopción práctica de IA dentro del flujo de ingeniería.'
       },
       {
         kind: 'Experiencia',
@@ -459,9 +477,9 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     ],
     about: {
       paragraphs: [
-        'Mi punto de partida es el desarrollo full-stack. Me muevo cómodo entre frontend, backend, APIs y trabajo de producto, sobre todo en proyectos donde el software tiene que resolver un problema real de cliente o de investigación y no solo quedar bien en una demo.',
-        'Además del trabajo de entrega, suelo detectar fricción en cómo se hace ingeniería y empujar mejoras útiles en herramientas internas, documentación, automatización y convenciones de trabajo cuando de verdad aportan. Me interesa menos el proceso por el proceso que hacer un sistema más fácil de construir, de entender y de mantener.',
-        'La IA aplicada me interesa de la misma forma práctica. Me importa dónde ayuda la automatización, dónde hacen falta límites y cómo una capacidad nueva puede formar parte del trabajo real de ingeniería sin convertir el sistema en algo más difícil de confiar.'
+        'Mi punto de partida es el desarrollo full-stack. Trabajo entre frontend, backend, APIs, flujos de datos y producto, sobre todo cuando el software tiene que resolver un problema real de cliente o de investigación.',
+        'Además de la entrega, suelo mejorar cómo se hace el trabajo de ingeniería: herramientas internas, documentación, automatización y convenciones compartidas que ahorran tiempo y reducen fricción.',
+        'Me interesa la IA aplicada desde esa misma mirada práctica. Me importa menos la novedad que dónde ayuda, dónde necesita límites y cómo puede formar parte del trabajo cotidiano de ingeniería.'
       ]
     },
     contact: {

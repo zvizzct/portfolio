@@ -1,12 +1,13 @@
 ---
 import LinkButton from './LinkButton.astro'
-import type { ProjectItem } from '../data/portfolioContent'
+import type { PortfolioContent, ProjectItem } from '../data/portfolioContent'
 
 interface Props {
   projects: ProjectItem[]
+  labels: PortfolioContent['projectLabels']
 }
 
-const { projects } = Astro.props
+const { projects, labels } = Astro.props
 ---
 
 <div class="project-list">
@@ -16,7 +17,7 @@ const { projects } = Astro.props
         <div class="project-head">
           <p class="project-meta-line">
             <span>{project.label}</span>
-            <span>{project.role}</span>
+            <span>{labels.role}: {project.role}</span>
           </p>
           <h3>{project.title}</h3>
         </div>
@@ -24,17 +25,17 @@ const { projects } = Astro.props
         <p class="project-summary">{project.summary}</p>
 
         <p class="project-detail">
-          <span>Stack</span>
+          <span>{labels.stack}</span>
           {project.stack}
         </p>
 
         <p class="project-detail">
-          <span>Contribution</span>
+          <span>{labels.contribution}</span>
           {project.contribution}
         </p>
 
         <p class="project-detail">
-          <span>Outcome</span>
+          <span>{labels.impact}</span>
           {project.impact}
         </p>
 
