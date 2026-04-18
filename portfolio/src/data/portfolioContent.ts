@@ -93,7 +93,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     seo: {
       title: 'Víctor Puerta | Portfolio',
       description:
-        'Víctor Puerta is a full-stack developer building software for client and research-driven projects, with a focus on automation, internal tools, and applied AI.'
+        'Víctor Puerta is a full-stack developer building software with a focus on automation, internal tools, and applied AI.'
     },
     layout: {
       skipLinkLabel: 'Skip to content'
@@ -105,7 +105,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       title: 'Víctor Puerta',
       note: 'Full-stack developer with a focus on automation, internal tools, and applied AI.',
       lede:
-        'I design and build full-stack software for client and research-driven projects, from interfaces and APIs to data systems and AI workflows.',
+        'I design and build full-stack software, from interfaces and APIs to data systems and AI workflows.',
       support:
         'I also build internal tools, automate repetitive work, and improve engineering workflows when that reduces friction and makes systems easier to maintain.',
       links: [
@@ -176,7 +176,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         organization: 'Eurecat',
         period: 'Apr 2024 - Present',
         description:
-          'Full-stack work on client and research-driven projects, including data pipelines, APIs, technical interfaces, and AI-based workflows. Alongside delivery, I have also built internal tools, standardized project setups, and supported the practical adoption of AI in the engineering workflow.'
+          'Full-stack work at Eurecat, a technology center, across client projects and projects linked to R&D, including data pipelines, APIs, technical interfaces, and AI-based workflows. Alongside delivery, I have also built internal tools, standardized project setups, and supported the practical adoption of AI in the engineering workflow.'
       },
       {
         kind: 'Experience',
@@ -272,7 +272,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     ],
     about: {
       paragraphs: [
-        'My starting point is full-stack development. I work across frontend, backend, APIs, data flows, and product work, especially when software needs to solve a real client or research problem.',
+        'My starting point is full-stack development. I work across frontend, backend, APIs, data flows, and product work, especially when software needs to solve a real client or product problem.',
         'Alongside delivery, I usually improve the way engineering work gets done: internal tools, documentation, automation, and shared conventions that save time and reduce friction.',
         "I'm interested in applied AI in the same practical way. I care less about novelty than about where it helps, where it needs limits, and how it can become part of everyday engineering work."
       ]
@@ -292,7 +292,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     seo: {
       title: 'Víctor Puerta | Portfolio',
       description:
-        'Víctor Puerta es un desarrollador full-stack que construye software para proyectos de cliente y de investigación, con foco en automatización, herramientas internas e IA aplicada.'
+        'Víctor Puerta es un desarrollador full-stack que construye software con foco en automatización, herramientas internas e IA aplicada.'
     },
     layout: {
       skipLinkLabel: 'Saltar al contenido'
@@ -304,7 +304,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       title: 'Víctor Puerta',
       note: 'Desarrollador full-stack con foco en automatización, herramientas internas e IA aplicada.',
       lede:
-        'Diseño y construyo software full-stack para proyectos de cliente y de investigación, desde interfaces y APIs hasta sistemas de datos y flujos con IA.',
+        'Diseño y construyo software full-stack, desde interfaces y APIs hasta sistemas de datos y flujos con IA.',
       support:
         'También suelo construir herramientas internas, automatizar trabajo repetitivo y mejorar flujos de ingeniería cuando eso reduce fricción y hace los sistemas más mantenibles.',
       links: [
@@ -375,7 +375,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
         organization: 'Eurecat',
         period: 'Abr 2024 - Actualidad',
         description:
-          'Trabajo full-stack en proyectos para cliente y ligados a investigación, incluyendo pipelines de datos, APIs, interfaces técnicas y flujos con IA. Además de la entrega, también he construido herramientas internas, estandarizado configuraciones de proyecto y apoyado la adopción práctica de IA dentro del flujo de ingeniería.'
+          'Trabajo full-stack en Eurecat, un centro tecnológico, en proyectos para cliente y en proyectos vinculados a I+D, incluyendo pipelines de datos, APIs, interfaces técnicas y flujos con IA. Además de la entrega, también he construido herramientas internas, estandarizado configuraciones de proyecto y apoyado la adopción práctica de IA dentro del flujo de ingeniería.'
       },
       {
         kind: 'Experiencia',
@@ -471,7 +471,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     ],
     about: {
       paragraphs: [
-        'Mi punto de partida es el desarrollo full-stack. Trabajo entre frontend, backend, APIs, flujos de datos y producto, sobre todo cuando el software tiene que resolver un problema real de cliente o de investigación.',
+        'Mi punto de partida es el desarrollo full-stack. Trabajo entre frontend, backend, APIs, flujos de datos y producto, sobre todo cuando el software tiene que resolver un problema real de cliente o de producto.',
         'Además de la entrega, suelo mejorar cómo se hace el trabajo de ingeniería: herramientas internas, documentación, automatización y convenciones compartidas que ahorran tiempo y reducen fricción.',
         'Me interesa la IA aplicada desde esa misma mirada práctica. Me importa menos la novedad que dónde ayuda, dónde necesita límites y cómo puede formar parte del trabajo cotidiano de ingeniería.'
       ]
