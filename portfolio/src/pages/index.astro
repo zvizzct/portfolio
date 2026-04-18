@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import AboutMe from '../components/AboutMe.astro'
+import Capabilities from '../components/Capabilities.astro'
 import Experience from '../components/Experience.astro'
 import LinkButton from '../components/LinkButton.astro'
 import Projects from '../components/Projects.astro'
@@ -16,17 +17,17 @@ import Studies from '../components/Studies.astro'
     <section class="hero" id="inicio">
       <h1 class="hero-title">Víctor Puerta</h1>
 
-      <p class="hero-title-note">Sistemas internos, tooling de ingeniería e IA aplicada.</p>
+      <p class="hero-title-note">Pipelines de datos, herramientas internas e IA aplicada.</p>
 
       <p class="hero-lede">
-        Diseño y construyo software para equipos: pipelines, herramientas y
-        capas de trabajo que hacen más fácil operar, documentar y escalar
-        sistemas con criterio.
+        Diseño y construyo software para equipos: APIs, tooling y sistemas
+        internos que reducen trabajo manual y hacen más fácil operar con
+        contexto.
       </p>
 
       <p class="hero-support">
-        Me interesa especialmente el punto donde producto, sistemas y adopción
-        real de IA dejan de ir por separado y empiezan a reforzarse entre sí.
+        Suelo trabajar en extracción y enriquecimiento con LLMs, tooling para
+        agentes, sistemas internos, APIs y documentación operativa.
       </p>
 
       <div class="link-list">
@@ -42,6 +43,14 @@ import Studies from '../components/Studies.astro'
         </LinkButton>
       </div>
     </section>
+
+    <SectionBlock
+      id="que-hago"
+      title="Trabajo habitual"
+      kicker="Dónde suelo aportar"
+    >
+      <Capabilities />
+    </SectionBlock>
 
     <SectionBlock
       id="experiencia"

@@ -1,0 +1,65 @@
+---
+const CAPABILITIES = [
+  {
+    title: 'Pipelines de datos y LLMs',
+    detail:
+      'Extracción, clasificación, enriquecimiento y recuperación de contexto técnico.'
+  },
+  {
+    title: 'Herramientas internas',
+    detail:
+      'Utilidades, automatizaciones y flujos para reducir setup y trabajo manual.'
+  },
+  {
+    title: 'Agentes y MCPs',
+    detail:
+      'Empaquetado de tooling para que un equipo adopte agentes con convenciones claras.'
+  },
+  {
+    title: 'Backend y arquitectura',
+    detail:
+      'APIs, servicios y estructura para sistemas que crecen sin perder legibilidad.'
+  },
+  {
+    title: 'IA aplicada',
+    detail:
+      'Paso de demo a flujo real: contexto, límites y revisión humana donde hace falta.'
+  }
+]
+---
+
+<div class="capability-list">
+  {
+    CAPABILITIES.map((capability) => (
+      <article class="capability-entry">
+        <h3>{capability.title}</h3>
+        <p>{capability.detail}</p>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .capability-list {
+    display: grid;
+    gap: 18px;
+  }
+
+  .capability-entry {
+    display: grid;
+    gap: 3px;
+  }
+
+  .capability-entry h3 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .capability-entry p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+  }
+</style>
