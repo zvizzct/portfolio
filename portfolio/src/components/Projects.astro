@@ -3,67 +3,67 @@ import LinkButton from './LinkButton.astro'
 
 const PROJECTS = [
   {
-    label: 'Infraestructura de agentes',
+    label: 'Agent infrastructure',
     title: 'Agent Runtime',
     summary:
-      'Entorno compartido para que distintos equipos trabajen con agentes sin montar su stack desde cero.',
-    role: 'Arquitectura de tooling',
-    stack: 'MCP, Python, shell scripts y wrappers multiagente',
+      'A shared environment that lets different teams work with agents without assembling their stack from scratch.',
+    role: 'Tooling architecture',
+    stack: 'MCP, Python, shell scripts, and multi-agent wrappers',
     contribution:
-      'Diseño de la capa de tooling y del empaquetado de MCPs y skills para adaptarlos a cada departamento.',
+      'Designed the tooling layer and the packaging model for MCPs and skills so they could be adapted to each department.',
     impact:
-      'Reduce setup manual y convierte convenciones internas en herramientas reutilizables.'
+      'Reduces manual setup and turns internal conventions into reusable tools.'
   },
   {
-    label: 'Pipeline interna + LLM',
-    title: 'Catálogo UES',
+    label: 'Internal pipeline + LLM',
+    title: 'UES Catalog',
     summary:
-      'Pipeline interna para convertir proyectos de GitLab en un catálogo técnico consultable.',
-    role: 'Pipeline de datos + producto',
-    stack: 'Python, GitLab API, Spring Boot, MySQL, Next.js y Docker',
+      'An internal pipeline that turns GitLab projects into a searchable technical catalog.',
+    role: 'Data pipeline + product',
+    stack: 'Python, GitLab API, Spring Boot, MySQL, Next.js, and Docker',
     contribution:
-      'Planteamiento de la pipeline completa: extracción, enriquecimiento con LLM, clasificación, API e interfaz.',
+      'Defined the full pipeline: extraction, LLM enrichment, classification, API, and interface.',
     impact:
-      'Permite recuperar contexto técnico sin revisar repositorio por repositorio.'
+      'Makes it possible to retrieve technical context without reviewing repositories one by one.'
   },
   {
-    label: 'Sistema privado',
-    title: 'Memoria Operativa',
+    label: 'Private system',
+    title: 'Operational Memory',
     summary:
-      'Sistema local-first para trabajar con agentes sobre proyectos, tareas y contexto persistente.',
-    role: 'Arquitectura + full stack',
-    stack: 'FastAPI, Next.js, Postgres, pgvector, Ollama y MCP',
+      'A local-first system for working with agents around projects, tasks, and persistent context.',
+    role: 'Architecture + full-stack',
+    stack: 'FastAPI, Next.js, Postgres, pgvector, Ollama, and MCP',
     contribution:
-      'Definición de arquitectura y construcción de memoria, búsqueda semántica y tooling MCP alrededor del flujo de trabajo.',
+      'Defined the architecture and built the memory layer, semantic retrieval, and MCP tooling around the workflow.',
     impact:
-      'Reduce la carga de contexto entre sesiones y hace más reutilizable el conocimiento de proyecto.',
-    links: [{ label: 'Código', href: 'https://github.com/zvizzct/organizacion' }]
+      'Reduces context load between sessions and makes project knowledge more reusable.',
+    links: [{ label: 'Code', href: 'https://github.com/zvizzct/organizacion' }]
   },
   {
-    label: 'iOS nativo',
+    label: 'Native iOS',
     title: 'Closet Native',
     summary:
-      'App iOS de armario personal con visión por IA, generación de outfits y calendario de uso.',
-    role: 'iOS + producto',
-    stack: 'SwiftUI, async/await, LLM vision, Supabase y arquitectura modular',
+      'A personal wardrobe iOS app with AI vision, outfit generation, and a usage calendar.',
+    role: 'iOS + product',
+    stack: 'SwiftUI, async/await, LLM vision, Supabase, and modular architecture',
     contribution:
-      'Construcción de la experiencia nativa y de la arquitectura modular para catalogación, recomendaciones y suscripción.',
+      'Built the native experience and the modular architecture behind cataloging, recommendations, and subscription flows.',
     impact:
-      'Aterriza capacidades de visión y generación en una experiencia cotidiana, no en una demo aislada.',
-    links: [{ label: 'Código', href: 'https://github.com/zvizzct/outfit-ios' }]
+      'Turns vision and generation capabilities into an everyday product experience, not an isolated demo.',
+    links: [{ label: 'Code', href: 'https://github.com/zvizzct/outfit-ios' }]
   },
   {
-    label: 'Biblioteca digital',
-    title: 'El Quiosco',
+    label: 'Digital library',
+    title: 'The Kiosk',
     summary:
-      'Biblioteca EPUB web para consultar, organizar y leer un catálogo personal desde el navegador.',
+      'A web-based EPUB library for browsing, organizing, and reading a personal catalog in the browser.',
     role: 'Frontend + backend',
-    stack: 'React, Tailwind, Node.js, Express y PostgreSQL',
+    stack: 'React, Tailwind, Node.js, Express, and PostgreSQL',
     contribution:
-      'Desarrollo de frontend y backend para búsqueda, organización y lectura integrada.',
+      'Built frontend and backend features for search, organization, and integrated reading.',
     impact:
-      'Lleva una biblioteca personal a un formato más accesible y menos dependiente de plataformas cerradas.',
-    links: [{ label: 'Código', href: 'https://github.com/zvizzct/backend-epub-library' }]
+      'Brings a personal library into a more accessible format with less dependence on closed platforms.',
+    links: [{ label: 'Code', href: 'https://github.com/zvizzct/backend-epub-library' }]
   }
 ]
 ---
@@ -88,12 +88,12 @@ const PROJECTS = [
         </p>
 
         <p class="project-detail">
-          <span>Aporte</span>
+          <span>Contribution</span>
           {project.contribution}
         </p>
 
         <p class="project-detail">
-          <span>Resultado</span>
+          <span>Outcome</span>
           {project.impact}
         </p>
 
