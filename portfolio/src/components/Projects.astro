@@ -1,76 +1,17 @@
 ---
 import LinkButton from './LinkButton.astro'
+import type { ProjectItem } from '../data/portfolioContent'
 
-const PROJECTS = [
-  {
-    label: 'Agent infrastructure',
-    title: 'Agent Runtime',
-    summary:
-      'A shared environment that lets different teams work with agents without assembling their stack from scratch.',
-    role: 'Tooling architecture',
-    stack: 'MCP, Python, shell scripts, and multi-agent wrappers',
-    contribution:
-      'Designed the tooling layer and the packaging model for MCPs and skills so they could be adapted to each department.',
-    impact:
-      'Reduces manual setup and turns internal conventions into reusable tools.'
-  },
-  {
-    label: 'Internal pipeline + LLM',
-    title: 'UES Catalog',
-    summary:
-      'An internal pipeline that turns GitLab projects into a searchable technical catalog.',
-    role: 'Data pipeline + product',
-    stack: 'Python, GitLab API, Spring Boot, MySQL, Next.js, and Docker',
-    contribution:
-      'Defined the full pipeline: extraction, LLM enrichment, classification, API, and interface.',
-    impact:
-      'Makes it possible to retrieve technical context without reviewing repositories one by one.'
-  },
-  {
-    label: 'Private system',
-    title: 'Operational Memory',
-    summary:
-      'A local-first system for working with agents around projects, tasks, and persistent context.',
-    role: 'Architecture + full-stack',
-    stack: 'FastAPI, Next.js, Postgres, pgvector, Ollama, and MCP',
-    contribution:
-      'Defined the architecture and built the memory layer, semantic retrieval, and MCP tooling around the workflow.',
-    impact:
-      'Reduces context load between sessions and makes project knowledge more reusable.',
-    links: [{ label: 'Code', href: 'https://github.com/zvizzct/organizacion' }]
-  },
-  {
-    label: 'Digital library',
-    title: 'The Kiosk',
-    summary:
-      'A web-based EPUB library for browsing, organizing, and reading a catalog of around 80k books in the browser.',
-    role: 'Frontend + backend',
-    stack: 'React, Tailwind, Node.js, Express, and PostgreSQL',
-    contribution:
-      'Built frontend and backend features for scraping, search, organization, and integrated reading.',
-    impact:
-      'Brings a personal library into a more accessible format with less dependence on closed platforms.',
-    links: [{ label: 'Code', href: 'https://github.com/zvizzct/backend-epub-library' }]
-  },
-  {
-    label: 'Native iOS',
-    title: 'Closet Native',
-    summary:
-      'A personal wardrobe iOS app with AI vision, outfit generation, and a usage calendar.',
-    role: 'iOS + product',
-    stack: 'SwiftUI, async/await, LLM vision, Supabase, and modular architecture',
-    contribution:
-      'Built the native experience and the modular architecture behind cataloging, recommendations, and subscription flows.',
-    impact:
-      'Turns vision and generation capabilities into an everyday product experience, not an isolated demo.',
-    links: [{ label: 'Code', href: 'https://github.com/zvizzct/outfit-ios' }]
-  }
-]
+interface Props {
+  projects: ProjectItem[]
+}
+
+const { projects } = Astro.props
 ---
 
 <div class="project-list">
   {
-    PROJECTS.map((project) => (
+    projects.map((project) => (
       <article class="project-entry">
         <div class="project-head">
           <p class="project-meta-line">

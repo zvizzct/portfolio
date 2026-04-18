@@ -1,36 +1,16 @@
 ---
-const CAPABILITIES = [
-  {
-    title: 'Data pipelines and LLM workflows',
-    detail:
-      'Extraction, classification, enrichment, and technical context retrieval.'
-  },
-  {
-    title: 'Internal tools',
-    detail:
-      'Utilities, automations, and workflows that reduce setup time and manual work.'
-  },
-  {
-    title: 'Agents and MCPs',
-    detail:
-      'Tooling packaged so a team can adopt agents with clear conventions and less friction.'
-  },
-  {
-    title: 'Backend and architecture',
-    detail:
-      'APIs, services, and structure for systems that scale without losing clarity.'
-  },
-  {
-    title: 'Applied AI',
-    detail:
-      'Moving from demo to real workflow, with context, guardrails, and human review where needed.'
-  }
-]
+import type { CapabilityItem } from '../data/portfolioContent'
+
+interface Props {
+  items: CapabilityItem[]
+}
+
+const { items } = Astro.props
 ---
 
 <div class="capability-list">
   {
-    CAPABILITIES.map((capability) => (
+    items.map((capability) => (
       <article class="capability-entry">
         <h3>{capability.title}</h3>
         <p>{capability.detail}</p>

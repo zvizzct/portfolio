@@ -1,17 +1,23 @@
 ---
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import type { Locale } from '../data/portfolioContent'
 
 interface Props {
   title: string
   description: string
+  lang: Locale
+  skipLinkLabel: string
+  headerMeta: string
+  switchHref: string
+  footerEmailLabel: string
 }
 
-const { description, title } = Astro.props
+const { description, title, lang, skipLinkLabel, headerMeta, switchHref, footerEmailLabel } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -21,11 +27,11 @@ const { description, title } = Astro.props
     <title>{title}</title>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">{skipLinkLabel}</a>
     <div class="page-frame">
-      <Header />
+      <Header locale={lang} meta={headerMeta} switchHref={switchHref} />
       <slot />
-      <Footer />
+      <Footer emailLabel={footerEmailLabel} />
     </div>
   </body>
 </html>

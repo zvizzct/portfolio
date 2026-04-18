@@ -1,10 +1,12 @@
 ---
-const currentYear = new Date().getFullYear()
+interface Props {
+  emailLabel: string
+}
+
+const { emailLabel } = Astro.props
 ---
 
 <footer class="site-footer">
-  <span>© {currentYear} / Víctor Puerta</span>
-
   <div class="site-footer-links">
     <a href="https://github.com/zvizzct" target="_blank" rel="noopener noreferrer">
       GitHub
@@ -16,6 +18,6 @@ const currentYear = new Date().getFullYear()
     >
       LinkedIn
     </a>
-    <a href="mailto:victor.puerta2298@gmail.com">Email</a>
+    <a href="mailto:victor.puerta2298@gmail.com">{emailLabel}</a>
   </div>
 </footer>

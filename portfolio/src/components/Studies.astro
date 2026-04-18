@@ -1,28 +1,16 @@
 ---
 import ExperienceItem from './ExperienceItem.astro'
+import type { ExperienceItemData } from '../data/portfolioContent'
 
-const STUDIES = [
-  {
-    kind: 'Education',
-    title: 'Computer Engineering',
-    organization: 'Universitat Pompeu Fabra',
-    period: 'Completed',
-    description:
-      'Training focused on software engineering, analysis, architecture, and systems development.'
-  },
-  {
-    kind: 'Education',
-    title: 'Higher Technician in Development of Web Applications (DAW)',
-    organization: 'Higher vocational qualification',
-    period: 'Earlier stage',
-    description:
-      'Two-year vocational qualification completed after Bachillerato, with a hands-on foundation in frontend, backend, databases, and web application development.'
-  }
-]
+interface Props {
+  items: ExperienceItemData[]
+}
+
+const { items } = Astro.props
 ---
 
 <div class="studies-list">
-  {STUDIES.map((entry) => <ExperienceItem {...entry} />)}
+  {items.map((entry) => <ExperienceItem {...entry} />)}
 </div>
 
 <style>

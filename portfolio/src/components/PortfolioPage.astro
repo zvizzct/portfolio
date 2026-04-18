@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro'
+import AboutMe from './AboutMe.astro'
+import Capabilities from './Capabilities.astro'
+import Experience from './Experience.astro'
+import LinkButton from './LinkButton.astro'
+import Projects from './Projects.astro'
+import SectionBlock from './SectionBlock.astro'
+import Studies from './Studies.astro'
+import type { Locale, PortfolioContent } from '../data/portfolioContent'
+
+interface Props {
+  content: PortfolioContent
+  locale: Locale
+  switchHref: string
+}
+
+const { content, locale, switchHref } = Astro.props
+---
+
+<Layout
+  title={content.seo.title}
+  description={content.seo.description}
+  lang={locale}
+  skipLinkLabel={content.layout.skipLinkLabel}
+  headerMeta={content.header.meta}
+  switchHref={switchHref}
+  footerEmailLabel={content.footer.emailLabel}
+>
+  <main class="site-main" id="main-content">
+    <section class="hero" id="home">
+      <h1 class="hero-title">{content.hero.title}</h1>
+
+      <p class="hero-title-note">{content.hero.note}</p>
+
+      <p class="hero-lede">{content.hero.lede}</p>
+
+      <p class="hero-support">{content.hero.support}</p>
+
+      <div class="link-list">
+        {
+          content.hero.links.map((link) => (
+            <LinkButton href={link.href} variant={link.variant ?? 'primary'}>
+              {link.label}
+            </LinkButton>
+          ))
+        }
+      </div>
+    </section>
+
+    <SectionBlock
+      id={content.sections.capabilities.id}
+      title={content.sections.capabilities.title}
+      kicker={content.sections.capabilities.kicker}
+    >
+      <Capabilities items={content.capabilities} />
+    </SectionBlock>
+
+    <SectionBlock
+      id={content.sections.experience.id}
+      title={content.sections.experience.title}
+      kicker={content.sections.experience.kicker}
+    >
+      <Experience items={content.experience} />
+    </SectionBlock>
+
+    <SectionBlock
+      id={content.sections.projects.id}
+      title={content.sections.projects.title}
+      kicker={content.sections.projects.kicker}
+    >
+      <Projects projects={content.projects} />
+    </SectionBlock>
+
+    <SectionBlock
+      id={content.sections.education.id}
+      title={content.sections.education.title}
+      kicker={content.sections.education.kicker}
+    >
+      <Studies items={content.studies} />
+    </SectionBlock>
+
+    <SectionBlock
+      id={content.sections.about.id}
+      title={content.sections.about.title}
+      kicker={content.sections.about.kicker}
+    >
+      <AboutMe paragraphs={content.about.paragraphs} />
+    </SectionBlock>
+
+    <section class="contact-note" id={content.contact.id}>
+      <div class="contact-copy">
+        <p class="eyebrow contact-eyebrow">{content.contact.eyebrow}</p>
+        <h2>{content.contact.title}</h2>
+      </div>
+
+      <div class="contact-actions">
+        {
+          content.contact.links.map((link) => (
+            <LinkButton href={link.href} variant={link.variant ?? 'primary'}>
+              {link.label}
+            </LinkButton>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 56px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+
+  .hero-title-note {
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0;
+  }
+
+  .hero-lede {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+    max-width: 60ch;
+  }
+
+  .hero-support {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+    max-width: 60ch;
+  }
+
+  .contact-note {
+    display: block;
+    margin-top: 42px;
+    color: var(--ink);
+  }
+
+  .contact-copy {
+    display: grid;
+    gap: 8px;
+  }
+
+  .contact-eyebrow {
+    color: var(--soft-ink);
+  }
+
+  .contact-copy h2 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  .contact-copy p:last-child {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-title {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      margin-bottom: 42px;
+    }
+
+    .hero-title {
+      font-size: 20px;
+    }
+
+    .hero-title-note {
+      font-size: 14px;
+    }
+
+    .hero-lede {
+      font-size: 14px;
+    }
+
+    .hero-support {
+      font-size: 14px;
+    }
+
+    .contact-copy h2 {
+      font-size: 17px;
+    }
+  }
+</style>

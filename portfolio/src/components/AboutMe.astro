@@ -1,26 +1,13 @@
 ---
+interface Props {
+  paragraphs: string[]
+}
+
+const { paragraphs } = Astro.props
 ---
 
 <div class="about-copy">
-  <p>
-    My starting point is full-stack development. I am comfortable moving across
-    frontend, backend, APIs, and product work, especially in projects where
-    software has to solve a real client or research problem rather than just
-    look good in a demo.
-  </p>
-  <p>
-    Alongside delivery work, I tend to notice friction in how engineering is
-    done and push useful improvements around internal tools, documentation,
-    automation, and working conventions when they genuinely help. I am less
-    interested in process for its own sake than in making a system easier to
-    build, easier to understand, and easier to maintain.
-  </p>
-  <p>
-    Applied AI interests me in the same practical way. I care about where
-    automation helps, where limits matter, and how new capabilities can become
-    part of real engineering work without turning the system into something
-    harder to trust.
-  </p>
+  {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
 </div>
 
 <style>
