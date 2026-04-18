@@ -40,9 +40,9 @@ const { description, title, lang, skipLinkLabel, headerMeta, switchHref } = Astr
     --paper-alt: #eeeeed;
     --ink: #1e1e1c;
     --ink-deep: #111110;
-    --accent: #4a5c6e;
+    --accent: #334454;
     --muted-ink: rgba(30, 30, 28, 0.72);
-    --soft-ink: rgba(30, 30, 28, 0.48);
+    --soft-ink: rgba(30, 30, 28, 0.64);
     --rule: 1px;
     --rule-thin: 1px;
     color-scheme: light;
@@ -229,37 +229,6 @@ const { description, title, lang, skipLinkLabel, headerMeta, switchHref } = Astr
   .rule-button.secondary:focus-visible {
     background: transparent;
     color: var(--accent);
-  }
-
-  .site-footer {
-    display: block;
-    margin-top: 48px;
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--soft-ink);
-  }
-
-  .site-footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 14px;
-    margin-top: 8px;
-  }
-
-  .site-footer a {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .site-footer a:hover,
-  .site-footer a:focus-visible {
-    background: transparent;
-    color: var(--accent);
-  }
-
-  .site-footer a:focus-visible {
-    outline: 1px solid currentColor;
-    outline-offset: 3px;
   }
 
   @media (max-width: 900px) {

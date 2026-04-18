@@ -93,7 +93,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     seo: {
       title: 'Víctor Puerta | Portfolio',
       description:
-        'Portfolio of Víctor Puerta, focused on full-stack development, automation, internal tools, and applied AI.'
+        'Víctor Puerta is a full-stack developer building software for client and research-driven projects, with a focus on automation, internal tools, and applied AI.'
     },
     layout: {
       skipLinkLabel: 'Skip to content'
@@ -292,7 +292,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
     seo: {
       title: 'Víctor Puerta | Portfolio',
       description:
-        'Portfolio de Víctor Puerta, centrado en desarrollo full-stack, automatización, herramientas internas e IA aplicada.'
+        'Víctor Puerta es un desarrollador full-stack que construye software para proyectos de cliente y de investigación, con foco en automatización, herramientas internas e IA aplicada.'
     },
     layout: {
       skipLinkLabel: 'Saltar al contenido'
