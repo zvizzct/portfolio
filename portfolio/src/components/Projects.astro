@@ -6,48 +6,63 @@ const PROJECTS = [
     label: 'Infraestructura de agentes',
     title: 'Agent Runtime',
     summary:
-      'Capa compartida de tooling para que los compañeros adopten agentes sin configurar nada desde cero. Empaqueta MCPs y skills como abstracciones listas para usar: cada departamento trabaja con su propio conjunto de herramientas, convenciones y nombres de recursos, sin que el setup dependa de cada persona.',
+      'Entorno compartido para que distintos equipos trabajen con agentes sin montar su stack desde cero.',
     role: 'Arquitectura de tooling',
     stack: 'MCP, Python, shell scripts y wrappers multiagente',
-    focus: 'Abstracciones reutilizables, convenciones por departamento y adopción sin fricción'
+    contribution:
+      'Diseño de la capa de tooling y del empaquetado de MCPs y skills para adaptarlos a cada departamento.',
+    impact:
+      'Reduce setup manual y convierte convenciones internas en herramientas reutilizables.'
+  },
+  {
+    label: 'Pipeline interna + LLM',
+    title: 'Catálogo UES',
+    summary:
+      'Pipeline interna para convertir proyectos de GitLab en un catálogo técnico consultable.',
+    role: 'Pipeline de datos + producto',
+    stack: 'Python, GitLab API, Spring Boot, MySQL, Next.js y Docker',
+    contribution:
+      'Planteamiento de la pipeline completa: extracción, enriquecimiento con LLM, clasificación, API e interfaz.',
+    impact:
+      'Permite recuperar contexto técnico sin revisar repositorio por repositorio.'
   },
   {
     label: 'Sistema privado',
     title: 'Memoria Operativa',
     summary:
-      'Sistema local-first para trabajar con agentes sobre proyectos, tareas y contexto persistente. Une memoria viva, búsqueda semántica, organización ligera y tooling MCP para reducir la carga de contexto entre sesiones.',
+      'Sistema local-first para trabajar con agentes sobre proyectos, tareas y contexto persistente.',
     role: 'Arquitectura + full stack',
     stack: 'FastAPI, Next.js, Postgres, pgvector, Ollama y MCP',
-    focus: 'Memoria de proyecto, recuperación semántica y herramientas para agentes',
+    contribution:
+      'Definición de arquitectura y construcción de memoria, búsqueda semántica y tooling MCP alrededor del flujo de trabajo.',
+    impact:
+      'Reduce la carga de contexto entre sesiones y hace más reutilizable el conocimiento de proyecto.',
     links: [{ label: 'Código', href: 'https://github.com/zvizzct/organizacion' }]
-  },
-  {
-    label: 'Pipeline interna + LLM',
-    title: 'Catalogo UES',
-    summary:
-      'Sistema interno para UES orientado a convertir proyectos de GitLab en un catalogo consultable. La parte importante fue plantear la pipeline completa: scrapeo, enriquecimiento con LLM, clasificacion, API y una interfaz desde la que recuperar contexto tecnico sin revisar repositorio por repositorio.',
-    role: 'Pipeline de datos + producto',
-    stack: 'Python, GitLab API, Spring Boot, MySQL, Next.js y Docker',
-    focus: 'Extraccion automatizada, normalizacion de metadata y acceso rapido al conocimiento'
   },
   {
     label: 'iOS nativo',
     title: 'Closet Native',
     summary:
-      'App de armario personal en SwiftUI. Usa visión por LLM para identificar y catalogar prendas a partir de fotos, genera combinaciones de outfit con IA según el contexto del día, y organiza el uso a través de un calendario. Incluye comunidad para compartir looks y modelo de suscripción.',
+      'App iOS de armario personal con visión por IA, generación de outfits y calendario de uso.',
     role: 'iOS + producto',
     stack: 'SwiftUI, async/await, LLM vision, Supabase y arquitectura modular',
-    focus: 'Visión aplicada, generación de outfits y experiencia nativa',
+    contribution:
+      'Construcción de la experiencia nativa y de la arquitectura modular para catalogación, recomendaciones y suscripción.',
+    impact:
+      'Aterriza capacidades de visión y generación en una experiencia cotidiana, no en una demo aislada.',
     links: [{ label: 'Código', href: 'https://github.com/zvizzct/outfit-ios' }]
   },
   {
     label: 'Biblioteca digital',
     title: 'El Quiosco',
     summary:
-      'Biblioteca EPUB para hacer el acceso a la cultura más directo. Sin plataformas intermedias ni formatos propietarios: cualquiera puede tener su catálogo personal consultable desde el navegador, con búsqueda, organización y lectura integradas.',
+      'Biblioteca EPUB web para consultar, organizar y leer un catálogo personal desde el navegador.',
     role: 'Frontend + backend',
     stack: 'React, Tailwind, Node.js, Express y PostgreSQL',
-    focus: 'Acceso abierto, catálogo personal y experiencia de lectura sin fricción',
+    contribution:
+      'Desarrollo de frontend y backend para búsqueda, organización y lectura integrada.',
+    impact:
+      'Lleva una biblioteca personal a un formato más accesible y menos dependiente de plataformas cerradas.',
     links: [{ label: 'Código', href: 'https://github.com/zvizzct/backend-epub-library' }]
   }
 ]
@@ -73,8 +88,13 @@ const PROJECTS = [
         </p>
 
         <p class="project-detail">
-          <span>Foco</span>
-          {project.focus}
+          <span>Aporte</span>
+          {project.contribution}
+        </p>
+
+        <p class="project-detail">
+          <span>Resultado</span>
+          {project.impact}
         </p>
 
         {project.links && (

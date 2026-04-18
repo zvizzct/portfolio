@@ -10,18 +10,23 @@ import Studies from '../components/Studies.astro'
 
 <Layout
   title="Víctor Puerta | Portfolio"
-  description="Portfolio de Víctor Puerta, con foco en sistemas, automatizacion, IA aplicada y resolucion de problemas."
+  description="Portfolio de Víctor Puerta, con foco en sistemas, automatización, IA aplicada y resolución de problemas."
 >
-  <main class="site-main">
+  <main class="site-main" id="main-content">
     <section class="hero" id="inicio">
       <h1 class="hero-title">Víctor Puerta</h1>
 
-      <p class="hero-title-note">Ingeniería de software, sistemas e IA.</p>
+      <p class="hero-title-note">Sistemas internos, tooling de ingeniería e IA aplicada.</p>
 
       <p class="hero-lede">
-        Construyo software y también el marco que lo rodea: documentación
-        accionable, tooling útil y decisiones que aguantan cuando el equipo
-        crece.
+        Diseño y construyo software para equipos: pipelines, herramientas y
+        capas de trabajo que hacen más fácil operar, documentar y escalar
+        sistemas con criterio.
+      </p>
+
+      <p class="hero-support">
+        Me interesa especialmente el punto donde producto, sistemas y adopción
+        real de IA dejan de ir por separado y empiezan a reforzarse entre sí.
       </p>
 
       <div class="link-list">
@@ -36,17 +41,6 @@ import Studies from '../components/Studies.astro'
           github
         </LinkButton>
       </div>
-
-      <ul class="hero-notes">
-        <li class="hero-note-row">
-          <span class="eyebrow">Ahora:</span>
-          <p>Eurecat, pipelines, sistemas internos y tooling de ingeniería.</p>
-        </li>
-        <li class="hero-note-row">
-          <span class="eyebrow">Siguiente:</span>
-          <p>Un equipo donde diseñar y construir formen parte del mismo trabajo.</p>
-        </li>
-      </ul>
     </section>
 
     <SectionBlock
@@ -75,8 +69,8 @@ import Studies from '../components/Studies.astro'
 
     <SectionBlock
       id="sobre-mi"
-      title="Perfil"
-      kicker="Qué busco y cómo trabajo"
+      title="Cómo trabajo"
+      kicker="Criterio técnico y forma de trabajo"
     >
       <AboutMe />
     </SectionBlock>
@@ -112,30 +106,6 @@ import Studies from '../components/Studies.astro'
     margin-bottom: 56px;
   }
 
-  .hero-notes {
-    display: grid;
-    gap: 8px;
-    list-style: none;
-    margin: 12px 0 0;
-  }
-
-  .hero-note-row {
-    display: block;
-  }
-
-  .hero-note-row .eyebrow {
-    display: inline;
-    color: var(--ink);
-  }
-
-  .hero-note-row p {
-    display: inline;
-    margin-left: 8px;
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--muted-ink);
-  }
-
   .hero-title {
     font-size: 24px;
     font-weight: 500;
@@ -155,7 +125,14 @@ import Studies from '../components/Studies.astro'
     font-size: 15px;
     line-height: 1.7;
     color: var(--muted-ink);
-    max-width: 62ch;
+    max-width: 60ch;
+  }
+
+  .hero-support {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+    max-width: 60ch;
   }
 
   .contact-note {
@@ -213,6 +190,10 @@ import Studies from '../components/Studies.astro'
     }
 
     .hero-lede {
+      font-size: 14px;
+    }
+
+    .hero-support {
       font-size: 14px;
     }
 
